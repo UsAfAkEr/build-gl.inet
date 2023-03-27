@@ -4,6 +4,21 @@ feeds:
   - name: helloworld
     uri: https://github.com/fw876/helloworld.git
     branch: master
+  - name: passwall
+    uri: https://github.com/xiaorouji/openwrt-passwall.git
+    branch: master
+
+  - name: passwall2
+    uri: https://github.com/xiaorouji/openwrt-passwall.git
+    branch: master
+
+  - name: ssrplus
+    uri: https://github.com/fw876/helloworld.git
+    branch: master
+
+  - name: openclash
+    uri: https://github.com/vernesong/OpenClash.git
+    branch: master
 packages:
   - luci-app-ssr-plus
   - luci-app-ddns
@@ -18,6 +33,16 @@ packages:
   - wireguard
   - luci-app-eqos
   - wireguard-tools
+  - luci-app-passwall
+  - luci-app-ssr-plus
+  - luci-app-openclash
+  - luci-app-xray
+  - luci-app-ssrserver-python
+  - luci-app-ssrserver-go
+  - luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Server=y
+  - luci-app-passwall_INCLUDE_Shadowsocks_Libev_Server=y
+  - luci-app-passwall_INCLUDE_Trojan_Plus=y
+  - luci-app-passwall_INCLUDE_V2ray_Plugin=y
 
 
 
@@ -29,3 +54,13 @@ diffconfig: |
   CONFIG_LUCI_LANG_zh_Hans=y
   CONFIG_BUSYBOX_CUSTOM=y
   CONFIG_BUSYBOX_CONFIG_FEATURE_FLOAT_SLEEP=y
+  CONFIG_PACKAGE_luci-app-passwall=y
+  CONFIG_PACKAGE_luci-app-ssr-plus=y
+  CONFIG_PACKAGE_luci-app-openclash=y
+  CONFIG_PACKAGE_luci-app-xray=y
+  CONFIG_PACKAGE_luci-app-ssrserver-python=y
+  CONFIG_PACKAGE_luci-app-ssrserver-go=y
+  CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_Libev_Server=y
+  CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Libev_Server=y
+  CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_Plus=y
+  CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Plugin=y
